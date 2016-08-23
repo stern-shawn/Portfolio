@@ -130,13 +130,13 @@ p {
 }
 
 /* Portfolio Animations */
+/* Code inspired by this tutorial: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/ */
 
 figure {
   position: relative;
   overflow: hidden;
   margin: 10px auto;
   max-width: 578px;
-  /*Got rid of float and added max-width along with margin to prevent background bleed that made it look off center*/
   max-height: 398px;
   height: auto;
   cursor: pointer;
@@ -164,7 +164,6 @@ figure figcaption::after {
 
 figure figcaption,
 figure figcaption > a {
-  /*Provides positioning for the slide up of the caption*/
   position: absolute;
   top: 0;
   left: 0;
@@ -172,14 +171,7 @@ figure figcaption > a {
   height: 100%;
 }
 
-
-/* Anchor will cover the whole item by default */
-
-
-/* For some effects it will show as a button */
-
 figure figcaption > a {
-  /*Hides View More Text from view in links*/
   z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;
