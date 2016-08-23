@@ -1,0 +1,173 @@
+/****** Navigation Styles *****/
+/* Offset content to not overlap with nav bar */
+body {
+  /*padding: 0px 0px 0px 0px;*/
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  background: #EEE;
+}
+
+/* Center Images */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.headerItem {
+  margin: 5px auto;
+}
+
+#heading {
+  background: transparent;
+  min-height: 100%;
+  position: relative;
+}
+
+#heading:before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  /*By using the before psuedo-class, I can have the background image and apply a filter*/
+  background: url("https://dl.dropboxusercontent.com/u/42615722/portfolio/photo-1416339442236-8ceb164046f8.jpeg") center center fixed no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+  filter: brightness(50%);
+}
+
+.rounded {
+  border-radius: 10%;
+  border-color: #111;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.container-fluid {
+     padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+.shadowedOrange {
+  color: #F78536;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.lightText {
+  color: #FFF;
+}
+
+#navigation, .navbar {
+  padding: 0px;
+}
+
+/* Add top padding of 50px to offset the  navbar until I can figure out a better solution... */
+
+#heading {
+  padding-top: 50px;
+  background: #EEEEEE;
+}
+
+#about{
+  padding-top: 50px;
+  background: #EEEEEE;
+}
+
+#portfolio {
+  padding-top: 50px;
+  background: #EEEEEE;
+}
+
+#contact {
+  padding-top: 50px;
+  background: #EEEEEE;
+}
+
+.thickHrLight, .thickHrDark {
+  border-top: solid 5px #FFF;
+  max-width: 300px;
+}
+
+.thickHrDark {
+  border-top: solid 5px #333;
+}
+
+/* By default (large screens) don't display this navbar by ID */
+#mobile-nav {
+  display: none;
+}
+
+.portfolioImageContainer {
+  padding-bottom: 25px;
+}
+
+.portfolioItem {
+  padding: 5px;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0px;
+}
+
+.contactList li {
+  margin: 10px;
+  display: inline-block;
+}
+
+.contactList li i {
+  padding: 5px;
+  color: #F78536;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.fa-facebook:hover, .fa-linkedin:hover, .fa-fire:hover, .fa-github:hover, .fa-instagram:hover {
+    color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+  /*Once 767 width reached, hide normal nav and display icon nav, also adjust body padding to accomodate the thicker nav bar from 50 to 56px*/
+  #navigation {
+    display: none;
+  }
+
+  /*Using floats on header and right classes help them stay in the right place on screen resize*/
+  .navbar-header {
+    display: inline-block;
+    float: left;
+  }
+
+  .navbar-right {
+    float: right;
+  }
+
+  #mobile-nav {
+    display: inline;
+    white-space: nowrap;
+  }
+
+  #mobile-nav ul li {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  body {
+    padding-top: 56px;
+  }
+}
