@@ -1,7 +1,5 @@
 /****** Navigation Styles *****/
-/* Offset content to not overlap with nav bar */
 body {
-  /*padding: 0px 0px 0px 0px;*/
   height: 100%;
   font-family: 'Lato', sans-serif;
   background: #EEE;
@@ -13,18 +11,23 @@ img {
   margin: 0 auto;
 }
 
-.headerItem {
-  margin: 5px auto;
+.intro-text {
+  padding: 100px 0;
+}
+
+.jumbotron {
+  background: transparent;
+  color: #FFF;
 }
 
 #heading {
   background: transparent;
-  min-height: 100%;
+  min-height: 60%;
   position: relative;
 }
 
 #heading:before {
-  content: ' ';
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
@@ -32,7 +35,7 @@ img {
   top: 0px;
   left: 0px;
   /*By using the before psuedo-class, I can have the background image and apply a filter*/
-  background: url("https://dl.dropboxusercontent.com/u/42615722/portfolio/photo-1416339442236-8ceb164046f8.jpeg") center center fixed no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/26165662/Assets/Shawn2.jpg") center center fixed no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -51,11 +54,7 @@ img {
   border-width: 1px;
 }
 
-.container-fluid {
-     padding: 0;
-}
-
-h1, h2 {
+h1 {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
@@ -69,19 +68,8 @@ p {
   text-shadow: 1px 1px 1px #000;
 }
 
-.lightText {
-  color: #FFF;
-}
-
 #navigation, .navbar {
   padding: 0px;
-}
-
-/* Add top padding of 50px to offset the  navbar until I can figure out a better solution... */
-
-#heading {
-  padding-top: 50px;
-  background: #EEEEEE;
 }
 
 #about{
@@ -138,16 +126,18 @@ p {
 }
 
 .fa-facebook:hover, .fa-linkedin:hover, .fa-fire:hover, .fa-github:hover, .fa-instagram:hover {
-    color: #333;
+  color: #333;
 }
 
 @media only screen and (max-width: 768px) {
-  /*Once 767 width reached, hide normal nav and display icon nav, also adjust body padding to accomodate the thicker nav bar from 50 to 56px*/
+  /*Once 767 width reached, hide normal nav and display icon nav, also adjust
+  body padding to accomodate the thicker nav bar from 50 to 56px*/
   #navigation {
     display: none;
   }
 
-  /*Using floats on header and right classes help them stay in the right place on screen resize*/
+  /*Using floats on header and right classes help them stay in the right place
+  on screen resize*/
   .navbar-header {
     display: inline-block;
     float: left;
@@ -169,5 +159,27 @@ p {
 
   body {
     padding-top: 56px;
+  }
+}
+
+/*Queries below are for management of intro text padding and height of my
+  primary image on various screen sizes */
+@media only screen and (min-width: 768px) and (max-width: 950px) {
+  .intro-text {
+    padding: 200px 0;
+  }
+
+  #heading {
+    min-height: 75%;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .intro-text {
+    padding: 300px 0;
+  }
+
+  #heading {
+    min-height: 100%;
   }
 }
